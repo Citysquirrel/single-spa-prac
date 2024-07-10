@@ -1,0 +1,4 @@
+<!-- src/app/components/product-list/product-list.component.html -->
+<div *ngFor="let product of products" class="product-item">
+  <a [routerLink]="['/product', product.id]">{{ product.name }}</a>
+</div>

@@ -1,0 +1,7 @@
+<!-- src/app/components/product-detail/product-detail.component.html -->
+<div *ngIf="product" class="product-detail">
+  <h2>{{ product.name }}</h2>
+  <p>{{ product.description }}</p>
+  <p>{{ product.price | currency }}</p>
+  <a [routerLink]="['/']">돌아가기</a>
+</div>

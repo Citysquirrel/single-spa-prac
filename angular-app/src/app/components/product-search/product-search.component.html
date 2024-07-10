@@ -1,0 +1,15 @@
+<!-- src/app/components/product-search/product-search.component.html -->
+<div class="search-container">
+  <input
+    [(ngModel)]="searchKeyword"
+    placeholder="Search products"
+    (keyup.enter)="search()"
+  />
+  <button (click)="search()">Search</button>
+  <button *ngIf="searchResults.length > 0" (click)="cancel()">X</button>
+</div>
+<div *ngIf="searchResults.length > 0" class="search-result-wrapper">
+  <div *ngFor="let product of searchResults" class="search-result-item">
+    <a [routerLink]="['/product', product.id]">{{ product.name }}</a>
+  </div>
+</div>

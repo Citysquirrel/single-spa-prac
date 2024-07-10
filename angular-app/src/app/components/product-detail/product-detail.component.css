@@ -1,0 +1,14 @@
+/* src/app/components/product-detail/product-detail.component.css */
+.product-detail {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.product-detail h2 {
+  margin-top: 0;
+}
+
+.product-detail p {
+  margin: 5px 0;
+}

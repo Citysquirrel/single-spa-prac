@@ -1,0 +1,14 @@
+/* src/app/components/product-list/product-list.component.css */
+.product-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.product-item a {
+  text-decoration: none;
+  color: #000;
+}
+
+.product-item a:hover {
+  text-decoration: underline;
+}

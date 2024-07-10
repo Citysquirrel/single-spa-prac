@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>single-spa root config</title>
+	</head>
+	<body>
+		<single-spa-layout>
+			<single-spa-router>
+				<route path="app1">
+					<application name="@org-name/app1"></application>
+				</route>
+				<route path="app2">
+					<application name="@org-name/app2"></application>
+				</route>
+			</single-spa-router>
+		</single-spa-layout>
+		<script type="systemjs-importmap">
+			{
+				"imports": {
+					"single-spa": "https://cdn.jsdelivr.net/npm/single-spa/lib/system/single-spa.min.js",
+					"@org-name/app1": "<%= process.env.ANGULAR_APP_URL %>",
+					"@org-name/app2": "<%= process.env.REACT_APP_URL %>"
+				}
+			}
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/named-exports.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/named-register.min.js"></script>
+		<script src="./root-config.js"></script>
+	</body>
+</html>
+
