@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "second": {
+    "@citysquirrel/angular-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -11,12 +11,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/angular-app",
             "deployUrl": "http://localhost:4200/",
             "index": "src/index.html",
-            "browser": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -26,7 +25,13 @@
               }
             ],
             "styles": ["src/styles.css"],
-            "scripts": []
+            "scripts": [],
+            "main": "src/main.single-spa.ts",
+            "customWebpackConfig": {
+              "path": "extra-webpack.config.js",
+              "libraryName": "@citysquirrel/angular-app",
+              "libraryTarget": "umd"
+            }
           },
           "configurations": {
             "production": {
@@ -42,24 +47,25 @@
                   "maximumError": "4kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "none"
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "outputHashing": "none"
             }
           },
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "second:build:production"
+              "buildTarget": "@citysquirrel/angular-app:build:production"
             },
             "development": {
-              "buildTarget": "second:build:development"
+              "buildTarget": "@citysquirrel/angular-app:build:development"
             }
           },
           "defaultConfiguration": "development"

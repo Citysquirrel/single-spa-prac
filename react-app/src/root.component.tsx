@@ -1,3 +1,4 @@
 export default function Root(props) {
-  return <section>{props.name} is mounted!</section>;
+	return <section>리액트 컴포넌트 마운트 성공!</section>;
 }
+
