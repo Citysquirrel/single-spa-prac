@@ -18,9 +18,12 @@
   -->
 
 	<main>
+		<route path="react">
+			<application name="@citysquirrel/react-app"></application>
+			<route path="detail"><div>sub route</div></route>
+		</route>
 		<route default>
 			<application name="@citysquirrel/angular-app"></application>
-			<application name="@citysquirrel/react-app"></application>
 			<!-- <application name="@single-spa/welcome"></application> -->
 		</route>
 	</main>
