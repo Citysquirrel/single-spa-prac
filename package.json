@@ -1,0 +1,17 @@
+{
+	"name": "single-spa-2",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"start": "http-server local-dist -p 8080",
+		"copy": "robocopy angular-app/dist/angular-app local-dist/angular-app /E && robocopy root-config/dist local-dist/root-config /E && robocopy react-app/dist local-dist/react-app /E"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"http-server": "^14.1.1"
+	}
+}
+

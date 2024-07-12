@@ -40,8 +40,8 @@
 					"single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
 					"react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
 					"react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
-					"@citysquirrel/angular-app": "http://localhost:4200/main.js",
-					"@citysquirrel/react-app": "http://localhost:8080/citysquirrel-react-app.js"
+					"@citysquirrel/angular-app": "<%= process.env.ANGULAR_APP %>",
+					"@citysquirrel/react-app": "<%= process.env.REACT_APP %>"
 				}
 			}
 		</script>
@@ -75,6 +75,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
 		<% } %>
+		<!-- <script src="./root-config.js"></script> -->
 	</head>
 	<body>
 		<noscript> You need to enable JavaScript to run this app. </noscript>
