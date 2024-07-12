@@ -1,2 +1,8 @@
 local-dist
 node_modules
+root-config/.env.development
+root-config/.env.production
+root-config/.env
+.env.development
+.env.production
+.env

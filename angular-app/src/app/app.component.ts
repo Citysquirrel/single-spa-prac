@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Shopping App';
+
+  navigateToReactApp(subRoute?: string) {
+    window.history.pushState(null, '', `/react${subRoute || ''}`);
+    window.dispatchEvent(new Event('popstate'));
+  }
 }
