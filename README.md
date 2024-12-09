@@ -1,4 +1,4 @@
-본 레포지토리는 single-spa 프로젝트 앱을 연습하기 위해 생성한 것입니다. mono-repository의 예제입니다. 실제 서비스로 사용시 submodule을 활용해 프로젝트를 구성하는 것도 좋은 방법입니다.
+본 레포지토리는 single-spa 프로젝트 앱을 연습하기 위해 생성한 것입니다. mono-repository의 예제입니다. 기존 angular로 제작된 프로젝트를 react로 바꿔가는 과정에서 react 프로젝트와 angular를 함께 사용하며 서비스할 수 있도록 하기 위함입니다. 실제 서비스로 사용시 submodule을 활용해 프로젝트를 구성하는 것도 좋은 방법입니다.
 
 # root-config/
 single-spa의 메인 화면을 컨트롤 해주는 프로젝트
